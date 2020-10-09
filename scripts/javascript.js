@@ -1,6 +1,7 @@
 $('document').ready(readyNow);
 
 let totalMonthlySalaryValue = 0;
+const employeeInfo = [];
 
 function readyNow() {
   console.log('Document is ready.');
@@ -9,18 +10,15 @@ function readyNow() {
 }
 
 function submitter() {
+  $('#tableBody').empty();
   if (checkFields() === true) {
-    $('#tableBody').append(`<tr> 
-    <td>${$(firstNameInput).val()}</td>
-    <td>${$(lastNameInput).val()}</td>
-    <td>${$(idInput).val()}</td>
-    <td>${$(titleInput).val()}</td>
-    <td>$${$(salaryInput).val()}</td>
-    <td><button class="js-btn">Delete</button></td>
-    </tr>`);
+    createObject();
+    render();
     updateTotalMonthly();
+    emptier();
   }
 }
+
 function checkFields() {
   if (
     $(firstNameInput).val() === '' ||
@@ -36,14 +34,48 @@ function checkFields() {
   }
 }
 
+function createObject() {
+  let obj = {
+    firstName: $(firstNameInput).val(),
+    lastName: $(lastNameInput).val(),
+    id: parseInt($(idInput).val()),
+    title: $(titleInput).val(),
+    salary: parseInt($(salaryInput).val()),
+  };
+  employeeInfo.push(obj);
+}
+function render() {
+  for (let i = 0; i < employeeInfo.length; i++) {
+    const employee = employeeInfo[i];
+    $('#tableBody').append(`<tr> 
+        <td>${employee.firstName}</td>
+        <td>${employee.lastName}</td>
+        <td>${employee.id}</td>
+        <td>${employee.title}</td>
+        <td>$${employee.salary}</td>
+        <td><button class="js-btn" data-index="${i}">Delete</button></td>
+        </tr>`);
+  }
+}
 function updateTotalMonthly() {
-  totalMonthlySalaryValue = parseInt(
-    Number($(salaryInput).val()) / 12 + +totalMonthlySalaryValue
-  );
+  totalMonthlySalaryValue = 0;
+  let amount = 0;
+  for (let i = 0; i < employeeInfo.length; i++) {
+    const employee = employeeInfo[i];
+    amount += employee.salary;
+  }
+  totalMonthlySalaryValue = parseInt(amount / 12);
   $('#totalMonthly').empty();
   $('#totalMonthly').append(totalMonthlySalaryValue);
 }
-
+function emptier() {
+  $(firstNameInput).val('');
+  $(lastNameInput).val('');
+  $(idInput).val('');
+  $(titleInput).val('');
+  $(salaryInput).val('');
+}
 function deleter() {
-  console.log('running');
+  $(this).parent().parent().remove();
+  console.log($(this).parent().data('index'));
 }

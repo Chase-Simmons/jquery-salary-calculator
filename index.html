@@ -13,11 +13,11 @@
         <header><h1>Salary Calculator Project</h1></header>
         <h3>Add Employee</h3>
         <div class="input-field-holder">
-            <input type="text" placeholder="first name">
-            <input type="text" placeholder="last name">
-            <input type="number" placeholder="employee id">
-            <input type="text" placeholder="title">
-            <input type="number" placeholder="annual salary">
+            <input id="firstNameInput" type="text" placeholder="first name">
+            <input id="lastNameInput" type="text" placeholder="last name">
+            <input id="idInput" type="number" placeholder="employee id">
+            <input id="titleInput" type="text" placeholder="title">
+            <input id="salaryInput" type="number" placeholder="annual salary">
             <button id="submitButton">Submit</button>
         </div>
         <div class="table-holder">
@@ -45,7 +45,7 @@
                 <tfoot>
                     <tr>
                         <td colspan="6" class="align-right">Total Monthly : $<span
-                                id="js-totalMonthly">0</span>
+                                id="totalMonthly">0</span>
                         </td>
                     </tr>
                 </tfoot>

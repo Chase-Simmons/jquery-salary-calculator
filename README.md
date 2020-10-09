@@ -32,10 +32,10 @@ How does someone use this application? Tell a user story here.
 
 ## Built With
 
-html
-css
-js
-jQuery
+Html
+Css
+Javascript
+JQuery
 
 ## License
 

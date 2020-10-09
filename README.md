@@ -13,12 +13,12 @@ The Salary Calculator Project allows a user to input their employee information 
 
 What problem did you solve? How did you solve it?
 
-    the biggest issue I had personally was the [data-index] concept on the button. At first I just wasn't understanding it and couldn't get it implemented in my project. Eventually I went back and re-watched our lecture for the day to get a better understanding, and after re-watching it I got a better grasp on it, and was able to successfully implement it into my project.
+The biggest issue I had personally was the [data-index] concept on the button. At first I just wasn't understanding it and couldn't get it implemented in my project. Eventually I went back and re-watched our lecture for the day to get a better understanding, and after re-watching it I got a better grasp on it, and was able to successfully implement it into my project.
 
 ## Screen Shot
 
-![Under Budget](images/Image-1.png)
-![Over Budget](images/Image-2.png)
+![Under Budget](Images/Image-1.png)
+![Over Budget](Images/Image-2.png)
 
 ## Usage
 

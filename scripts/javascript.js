@@ -65,6 +65,11 @@ function updateTotalMonthly() {
     amount += employee.salary;
   }
   totalMonthlySalaryValue = parseInt(amount / 12);
+  if (totalMonthlySalaryValue > 20000) {
+    $('.align-right-green').addClass('align-right-red');
+  } else {
+    $('.align-right-green').removeClass('align-right-red');
+  }
   $('#totalMonthly').empty();
   $('#totalMonthly').append(totalMonthlySalaryValue);
 }
@@ -76,6 +81,8 @@ function emptier() {
   $(salaryInput).val('');
 }
 function deleter() {
+  let index = $(this).parent().data('index');
+  employeeInfo.splice(index, 1);
   $(this).parent().parent().remove();
-  console.log($(this).parent().data('index'));
+  updateTotalMonthly();
 }

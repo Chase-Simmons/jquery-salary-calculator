@@ -7,41 +7,51 @@
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="scripts/javascript.js"></script>
         <link rel="stylesheet" href="stylesheet/style.css">
-        <title>Document</title>
+        <title>Salary Calculator Project</title>
     </head>
     <body>
         <header><h1>Salary Calculator Project</h1></header>
-        <h3>Add Employee</h3>
-        <div class="input-field-holder">
-            <input id="firstNameInput" type="text" placeholder="first name">
-            <input id="lastNameInput" type="text" placeholder="last name">
-            <input id="idInput" type="number" placeholder="employee id">
-            <input id="titleInput" type="text" placeholder="title">
-            <input id="salaryInput" type="number" placeholder="annual salary">
-            <button id="submitButton">Submit</button>
-        </div>
-        <div class="table-holder">
-            <table class="table-box">
-                <thead>
-                    <tr>
-                        <td>First Name</td>
-                        <td>Last Name</td>
-                        <td>ID</td>
-                        <td>Title</td>
-                        <td class='sal'>Annual Salary</td>
-                        <td></td>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="6" class="align-right">Total Monthly : $<span
-                                id="totalMonthly">0</span>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+        <div class="container">
+            <h3>Add Employee</h3>
+            <div class="input-button-border">
+                <div class="input-field-holder">
+                    <input id="firstNameInput" type="text"
+                        placeholder="firstName">
+                    <input id="lastNameInput" type="text"
+                        placeholder="lastName">
+                    <input id="idInput" type="number" placeholder="employeeId">
+                    <input id="titleInput" type="text" placeholder="title">
+                    <input id="salaryInput" type="number"
+                        placeholder="annualSalary">
+                </div>
+                <div class="buttonHolder"><button id="submitButton">Submit</button></div>
+            </div>
+            <h3>Employees</h3>
+            <div class="table-holder">
+                <table class="table-box">
+                    <thead>
+                        <tr>
+                            <td>First Name</td>
+                            <td>Last Name</td>
+                            <td>ID</td>
+                            <td>Title</td>
+                            <td class='sal'>Annual Salary</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6" class="align-right-green">Total
+                                Monthly
+                                : $<span
+                                    id="totalMonthly">0</span>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
     </body>
 </html>

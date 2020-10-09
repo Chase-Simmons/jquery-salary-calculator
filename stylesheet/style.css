@@ -19,15 +19,51 @@ h1 {
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 25px;
+  width: 100%;
 }
 .table-box td {
   border: solid 1px #333333;
+  border-top: solid 3px #333333;
   padding: 4px 6px;
 }
-.align-right {
+.align-right-green {
   text-align: right;
+  background-color: chartreuse;
+}
+.align-right-red {
+  text-align: right;
+  background-color: crimson;
 }
 h3 {
   text-align: center;
+  background-color: rgb(169, 252, 255);
+  margin: 0;
+  padding: 10px;
+}
+
+.container {
+  border: solid 3px #333333;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.buttonHolder {
+  text-align: center;
+  margin-top: 10px;
+  padding: 6px 10px;
+}
+button {
+  font-size: 15px;
+}
+.input-button-border {
+  border-top: solid 3px #333333;
+  border-bottom: solid 3px #333333;
+  background-color: rgb(232, 253, 255);
+}
+tbody tr:nth-child(even) {
+  background-color: rgb(174, 238, 245);
+}
+thead {
+  background-color: rgb(169, 252, 255);
 }

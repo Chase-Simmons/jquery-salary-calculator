@@ -11,3 +11,7 @@ header {
 h1 {
   padding-left: 15px;
 }
+.input-field-holder {
+  margin-top: 25px;
+  text-align: center;
+}

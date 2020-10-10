@@ -10,8 +10,8 @@ function readyNow() {
 }
 
 function submitter() {
-  $('#tableBody').empty();
   if (checkFields() === true) {
+    $('#tableBody').empty();
     createObject();
     render();
     updateTotalMonthly();

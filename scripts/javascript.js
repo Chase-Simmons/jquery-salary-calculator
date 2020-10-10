@@ -52,7 +52,7 @@ function render() {
         <td>${employee.lastName}</td>
         <td>${employee.id}</td>
         <td>${employee.title}</td>
-        <td>$${employee.salary}</td>
+        <td>$${numberWithCommas(employee.salary)}</td>
         <td><button class="js-btn" data-index="${i}">Delete</button></td>
         </tr>`);
   }
@@ -70,6 +70,7 @@ function updateTotalMonthly() {
   } else {
     $('.align-right-green').removeClass('align-right-red');
   }
+  totalMonthlySalaryValue = numberWithCommas(totalMonthlySalaryValue);
   $('#totalMonthly').empty();
   $('#totalMonthly').append(totalMonthlySalaryValue);
 }
@@ -86,3 +87,9 @@ function deleter() {
   $(this).parent().parent().remove();
   updateTotalMonthly();
 }
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+// code from https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+// used this just for appearance purposes ONLY. THIS DOES NOT ADD ANY [REAL] FUNCTIONALITY TO MY CODE. :) <3

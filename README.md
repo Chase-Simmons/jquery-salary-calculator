@@ -7,7 +7,7 @@
 
 ## Description
 
-Duration: 3 hours 21 minutes.
+Duration: 4 hours.
 
 The Salary Calculator Project allows a user to input their employee information and store it, so that they can keep track of each employee's name, id, title, and salary. In this specific case the user is budgeting a monthly salary of \$20,000 and a visual update will reflect when the budget has gone above that amount.
 
